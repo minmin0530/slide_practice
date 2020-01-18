@@ -1,0 +1,145 @@
+@import "base";
+
+main {
+    height: 500px;
+}
+.mainvisual {
+    position: relative;
+    left: 0px;
+    top: 200px;
+
+
+
+
+
+    &_img {
+        position: relative;
+        z-index: 2;
+        object-fit: cover;
+        object-position: left;
+        height: 420px;
+        width: 50px;
+    }
+    &_textimg {
+        position: relative;
+        z-index: 1;
+        left: -100px;
+        object-fit: cover;
+        object-position: left;
+        height: 420px;
+        width: 50px;
+    }
+    &_text {
+        position: relative;
+        z-index: 2;
+        font-size: 48px;
+        writing-mode: vertical-rl;
+        left: 0px;
+        top: 0px;
+        object-fit: cover;
+        object-position: left;
+        height: 420px;
+        width: 50px;
+    }
+}
+
+.footer {
+    @extend %base;
+    background: #00ff00;
+    height: 500px;
+
+    @include media(pc) {
+        width: 1366px;
+        background-image: url("./img/footer/background.png");
+    };
+    @include media(tab) {
+        width: 414px;
+        background-image: url("./img/footer/background.png");
+    };
+    @include media(sp) {
+        width: 320px;
+        background-image: url("./img/footer/background.png");
+    };
+}
+
+.article {
+
+    @include media(pc) {
+        width: 1366px;
+    };
+    @include media(tab) {
+        width: 414px;
+    };
+    @include media(sp) {
+        width: 320px;
+    };
+
+    &__section {
+        &_img1 {
+            object-fit: cover;
+            object-position: right;
+            width: 0px;
+            height: 420px;
+            position: relative;
+            left: 0px;
+        }
+        &_img2 {
+            object-fit: cover;
+            object-position: left;
+            width: 0px;
+            height: 420px;
+            position: relative;
+            left: 1366px;
+        }
+        &_img3 {
+            object-fit: cover;
+            object-position: right;
+            width: 0px;
+            height: 420px;
+            position: relative;
+            left: 0px;
+        }
+        &_img4 {
+            object-fit: cover;
+            object-position: left;
+            width: 0px;
+            height: 420px;
+            position: relative;
+            left: 1366px;
+        }
+    }
+}
+
+.header {
+    @extend %base;
+    background: #00ff00;
+
+    @include media(pc) {
+        width: 1366px;
+        background-image: url("./img/header/background.png");
+    };
+    @include media(tab) {
+        width: 414px;
+        background-image: url("./img/sp/background.png");
+    };
+    @include media(sp) {
+        width: 320px;
+        background-image: url("./img/sp/background.png");
+    };
+}
+
+body {
+    @extend %base;
+    margin: 0px;
+    width: 100%;
+
+    @include media(pc) {
+      background-color: white;
+    };
+    @include media(tab) {
+      background-color: white;
+    };
+    @include media(sp) {
+      background-color: white;
+    };
+}
