@@ -2,14 +2,28 @@
 
 main {
     height: 500px;
+
+    @include media(pc) {
+        width: 1366px;
+    };
+    @include media(tab) {
+        width: 414px;
+    };
+    @include media(sp) {
+        width: 320px;
+    };
+
+    overflow: hidden;
+
 }
 .mainvisual {
     position: relative;
     left: 0px;
-    top: 200px;
+    top: 0px;
 
-
-
+    text-overflow: clip;
+    white-space: nowrap;    
+    animation   : scrollAnime 10s linear infinite;
 
 
     &_img {
@@ -17,8 +31,8 @@ main {
         z-index: 2;
         object-fit: cover;
         object-position: left;
-        height: 420px;
-        width: 50px;
+        height: 450px;
+        width: 570px;
     }
     &_textimg {
         position: relative;
@@ -26,20 +40,24 @@ main {
         left: -100px;
         object-fit: cover;
         object-position: left;
-        height: 420px;
-        width: 50px;
+        height: 392px;
+        width: 392px;
     }
     &_text {
         position: relative;
         z-index: 2;
         font-size: 48px;
         writing-mode: vertical-rl;
-        left: 0px;
-        top: 0px;
+        left: 500px;
+        top: -300px;
         object-fit: cover;
         object-position: left;
         height: 420px;
-        width: 50px;
+        width: 200px;
+    }
+    @keyframes scrollAnime{
+        0% { transform: translateX(100%)}
+      100% { transform: translateX(-300%)}
     }
 }
 
