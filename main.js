@@ -1,20 +1,20 @@
 window.onload = function() {
-    const mainvisual = this.document.getElementsByClassName("mainvisual");
-    const mainvisual_text = this.document.getElementsByClassName("mainvisual_text");
-    let left0 = 0;
-    let left1 = 0;
+    // const mainvisual = this.document.getElementsByClassName("mainvisual");
+    // const mainvisual_text = this.document.getElementsByClassName("mainvisual_text");
+    // let left0 = 0;
+    // let left1 = 0;
 
-    loop();
+    // loop();
 
-    function loop() {
-        left0 -= 1;
+    // function loop() {
+    //     left0 -= 1;
         // mainvisual[0].style.left = left0 + "px";
         // mainvisual_text[0].style.left = left0 + "px";
         // mainvisual[0].style.width = -left0 + "px";
         // mainvisual_text[0].style.width = -left0 + "px";
 
-        requestAnimationFrame(loop);
-    };
+    //     requestAnimationFrame(loop);
+    // };
 
     window.addEventListener( "scroll", function () {
         const scrollTop = document.scrollingElement.scrollTop;

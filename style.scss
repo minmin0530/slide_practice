@@ -16,14 +16,14 @@ main {
     overflow: hidden;
 
 }
-.mainvisual {
+.mainvisual1 {
     position: relative;
     left: 0px;
     top: 0px;
 
     text-overflow: clip;
     white-space: nowrap;    
-    animation   : scrollAnime 10s linear infinite;
+    animation   : scrollAnime1 10s ease infinite;
 
 
     &_img {
@@ -55,11 +55,68 @@ main {
         height: 420px;
         width: 200px;
     }
-    @keyframes scrollAnime{
+    @keyframes scrollAnime1{
         0% { transform: translateX(100%)}
-      100% { transform: translateX(-300%)}
+       13% { transform: translateX(100%)}
+       25% { transform: translateX(30%)}
+       75% { transform: translateX(30%)}
+      100% { transform: translateX(-100%)}
     }
 }
+
+.mainvisual2 {
+    position: relative;
+    left: 0px;
+    top: -850px;
+
+    text-overflow: clip;
+    white-space: nowrap;    
+    animation   : scrollAnime2 10s ease infinite;
+
+
+    &_img {
+        position: relative;
+        z-index: 2;
+        object-fit: cover;
+        object-position: left;
+        height: 450px;
+        width: 570px;
+    }
+    &_textimg {
+        position: relative;
+        z-index: 1;
+        left: -100px;
+        object-fit: cover;
+        object-position: left;
+        height: 392px;
+        width: 392px;
+    }
+    &_text {
+        position: relative;
+        z-index: 2;
+        font-size: 48px;
+        writing-mode: vertical-rl;
+        left: 500px;
+        top: -300px;
+        object-fit: cover;
+        object-position: left;
+        height: 420px;
+        width: 200px;
+    }
+    @keyframes scrollAnime2{
+        0% { transform: translateX(30%)}
+       12% { transform: translateX(30%)}
+       25% { transform: translateX(-100%)}
+       26% { transform: translateY( 200%)}
+       27% { transform: translate(100%, 200%)}
+       28% { transform: translate(100%, 0%)}
+       75% { transform: translate(100%, 0%)}
+       88% { transform: translateX(30%)}
+      100% { transform: translateX(30%)}
+    }
+}
+
+
 
 .footer {
     @extend %base;

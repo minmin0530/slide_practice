@@ -37,17 +37,17 @@ main {
   }
 }
 
-.mainvisual {
+.mainvisual1 {
   position: relative;
   left: 0px;
   top: 0px;
   text-overflow: clip;
   white-space: nowrap;
-  -webkit-animation: scrollAnime 10s linear infinite;
-          animation: scrollAnime 10s linear infinite;
+  -webkit-animation: scrollAnime1 10s ease infinite;
+          animation: scrollAnime1 10s ease infinite;
 }
 
-.mainvisual_img {
+.mainvisual1_img {
   position: relative;
   z-index: 2;
   -o-object-fit: cover;
@@ -58,7 +58,7 @@ main {
   width: 570px;
 }
 
-.mainvisual_textimg {
+.mainvisual1_textimg {
   position: relative;
   z-index: 1;
   left: -100px;
@@ -70,7 +70,7 @@ main {
   width: 392px;
 }
 
-.mainvisual_text {
+.mainvisual1_text {
   position: relative;
   z-index: 2;
   font-size: 48px;
@@ -87,25 +87,177 @@ main {
   width: 200px;
 }
 
-@-webkit-keyframes scrollAnime {
+@-webkit-keyframes scrollAnime1 {
   0% {
     -webkit-transform: translateX(100%);
             transform: translateX(100%);
   }
+  13% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  25% {
+    -webkit-transform: translateX(30%);
+            transform: translateX(30%);
+  }
+  75% {
+    -webkit-transform: translateX(30%);
+            transform: translateX(30%);
+  }
   100% {
-    -webkit-transform: translateX(-300%);
-            transform: translateX(-300%);
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
   }
 }
 
-@keyframes scrollAnime {
+@keyframes scrollAnime1 {
   0% {
     -webkit-transform: translateX(100%);
             transform: translateX(100%);
   }
+  13% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  25% {
+    -webkit-transform: translateX(30%);
+            transform: translateX(30%);
+  }
+  75% {
+    -webkit-transform: translateX(30%);
+            transform: translateX(30%);
+  }
   100% {
-    -webkit-transform: translateX(-300%);
-            transform: translateX(-300%);
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+
+.mainvisual2 {
+  position: relative;
+  left: 0px;
+  top: -850px;
+  text-overflow: clip;
+  white-space: nowrap;
+  -webkit-animation: scrollAnime2 10s ease infinite;
+          animation: scrollAnime2 10s ease infinite;
+}
+
+.mainvisual2_img {
+  position: relative;
+  z-index: 2;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: left;
+     object-position: left;
+  height: 450px;
+  width: 570px;
+}
+
+.mainvisual2_textimg {
+  position: relative;
+  z-index: 1;
+  left: -100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: left;
+     object-position: left;
+  height: 392px;
+  width: 392px;
+}
+
+.mainvisual2_text {
+  position: relative;
+  z-index: 2;
+  font-size: 48px;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  left: 500px;
+  top: -300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: left;
+     object-position: left;
+  height: 420px;
+  width: 200px;
+}
+
+@-webkit-keyframes scrollAnime2 {
+  0% {
+    -webkit-transform: translateX(30%);
+            transform: translateX(30%);
+  }
+  12% {
+    -webkit-transform: translateX(30%);
+            transform: translateX(30%);
+  }
+  25% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  26% {
+    -webkit-transform: translateY(200%);
+            transform: translateY(200%);
+  }
+  27% {
+    -webkit-transform: translate(100%, 200%);
+            transform: translate(100%, 200%);
+  }
+  28% {
+    -webkit-transform: translate(100%, 0%);
+            transform: translate(100%, 0%);
+  }
+  75% {
+    -webkit-transform: translate(100%, 0%);
+            transform: translate(100%, 0%);
+  }
+  88% {
+    -webkit-transform: translateX(30%);
+            transform: translateX(30%);
+  }
+  100% {
+    -webkit-transform: translateX(30%);
+            transform: translateX(30%);
+  }
+}
+
+@keyframes scrollAnime2 {
+  0% {
+    -webkit-transform: translateX(30%);
+            transform: translateX(30%);
+  }
+  12% {
+    -webkit-transform: translateX(30%);
+            transform: translateX(30%);
+  }
+  25% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  26% {
+    -webkit-transform: translateY(200%);
+            transform: translateY(200%);
+  }
+  27% {
+    -webkit-transform: translate(100%, 200%);
+            transform: translate(100%, 200%);
+  }
+  28% {
+    -webkit-transform: translate(100%, 0%);
+            transform: translate(100%, 0%);
+  }
+  75% {
+    -webkit-transform: translate(100%, 0%);
+            transform: translate(100%, 0%);
+  }
+  88% {
+    -webkit-transform: translateX(30%);
+            transform: translateX(30%);
+  }
+  100% {
+    -webkit-transform: translateX(30%);
+            transform: translateX(30%);
   }
 }
 
