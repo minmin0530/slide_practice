@@ -1,4 +1,4 @@
-.footer, .header, body {
+.menu__element, .footer, .article__h2, .article__news_ul, .header, body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -15,17 +15,17 @@
 }
 
 main {
-  height: 500px;
+  height: 647px;
   overflow: hidden;
 }
 
-@media only screen and (min-width: 1171px) {
+@media only screen and (min-width: 1366px) {
   main {
     width: 1366px;
   }
 }
 
-@media only screen and (max-width: 1170px) {
+@media only screen and (max-width: 1365px) {
   main {
     width: 414px;
   }
@@ -261,19 +261,41 @@ main {
   }
 }
 
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.menu__element {
+  margin: 5px;
+  padding-left: 5px;
+  border-left: #653f36 1px solid;
+}
+
+.menu__element:last-child {
+  padding-right: 5px;
+  border-right: #653f36 1px solid;
+}
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .footer {
-  background: #00ff00;
   height: 500px;
 }
 
-@media only screen and (min-width: 1171px) {
+@media only screen and (min-width: 1366px) {
   .footer {
     width: 1366px;
     background-image: url("./img/footer/background.png");
   }
 }
 
-@media only screen and (max-width: 1170px) {
+@media only screen and (max-width: 1365px) {
   .footer {
     width: 414px;
     background-image: url("./img/footer/background.png");
@@ -287,13 +309,13 @@ main {
   }
 }
 
-@media only screen and (min-width: 1171px) {
+@media only screen and (min-width: 1366px) {
   .article {
     width: 1366px;
   }
 }
 
-@media only screen and (max-width: 1170px) {
+@media only screen and (max-width: 1365px) {
   .article {
     width: 414px;
   }
@@ -303,64 +325,234 @@ main {
   .article {
     width: 320px;
   }
+}
+
+.article__h2 {
+  color: #653f36;
+  font-size: 25px;
+}
+
+@media only screen and (min-width: 1366px) {
+  .article__h2 {
+    width: 1366px;
+  }
+}
+
+@media only screen and (max-width: 1365px) {
+  .article__h2 {
+    width: 414px;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  .article__h2 {
+    width: 320px;
+  }
+}
+
+.article__section_h3 {
+  color: #653f36;
+  font-size: 25px;
+}
+
+.article__section_p {
+  width: 300px;
+  height: 200px;
+}
+
+.article__section_text1 {
+  position: relative;
+  left: 0px;
+  top: -300px;
+}
+
+.article__section_text2 {
+  position: relative;
+  left: 0px;
+  top: -300px;
+}
+
+.article__section_text3 {
+  position: relative;
+  left: 0px;
+  top: -300px;
+}
+
+.article__section_text4 {
+  position: relative;
+  left: 0px;
+  top: -300px;
 }
 
 .article__section_img1 {
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: right;
-     object-position: right;
-  width: 0px;
-  height: 420px;
   position: relative;
-  left: 0px;
+  left: -330px;
 }
 
 .article__section_img2 {
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: left;
-     object-position: left;
-  width: 0px;
-  height: 420px;
   position: relative;
   left: 1366px;
 }
 
 .article__section_img3 {
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: right;
-     object-position: right;
-  width: 0px;
-  height: 420px;
   position: relative;
   left: 0px;
 }
 
 .article__section_img4 {
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: left;
-     object-position: left;
-  width: 0px;
-  height: 420px;
   position: relative;
   left: 1366px;
 }
 
-.header {
-  background: #00ff00;
+.article__section1 {
+  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: left;
+     object-position: left;
 }
 
-@media only screen and (min-width: 1171px) {
+@media only screen and (min-width: 1366px) {
+  .article__section1 {
+    width: 1366px;
+    height: 500px;
+  }
+}
+
+@media only screen and (max-width: 1365px) {
+  .article__section1 {
+    width: 414px;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  .article__section1 {
+    width: 320px;
+  }
+}
+
+.article__section2 {
+  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: right;
+     object-position: right;
+}
+
+@media only screen and (min-width: 1366px) {
+  .article__section2 {
+    width: 1366px;
+    height: 500px;
+  }
+}
+
+@media only screen and (max-width: 1365px) {
+  .article__section2 {
+    width: 414px;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  .article__section2 {
+    width: 320px;
+  }
+}
+
+.article__section3 {
+  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: left;
+     object-position: left;
+}
+
+@media only screen and (min-width: 1366px) {
+  .article__section3 {
+    width: 1366px;
+    height: 500px;
+  }
+}
+
+@media only screen and (max-width: 1365px) {
+  .article__section3 {
+    width: 414px;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  .article__section3 {
+    width: 320px;
+  }
+}
+
+.article__section4 {
+  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: right;
+     object-position: right;
+}
+
+@media only screen and (min-width: 1366px) {
+  .article__section4 {
+    width: 1366px;
+    height: 500px;
+  }
+}
+
+@media only screen and (max-width: 1365px) {
+  .article__section4 {
+    width: 414px;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  .article__section4 {
+    width: 320px;
+  }
+}
+
+.article__news_ul {
+  list-style: none;
+}
+
+@media only screen and (min-width: 1366px) {
+  .article__news_ul {
+    width: 1366px;
+  }
+}
+
+@media only screen and (max-width: 1365px) {
+  .article__news_ul {
+    width: 414px;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  .article__news_ul {
+    width: 320px;
+  }
+}
+
+.article__news_li {
+  border-top: #fff6e6 1px solid;
+  width: 600px;
+  padding: 20px;
+}
+
+.article__news_h3 {
+  font-size: 20px;
+  color: #653f36;
+}
+
+@media only screen and (min-width: 1366px) {
   .header {
     width: 1366px;
     background-image: url("./img/header/background.png");
   }
 }
 
-@media only screen and (max-width: 1170px) {
+@media only screen and (max-width: 1365px) {
   .header {
     width: 414px;
     background-image: url("./img/sp/background.png");
@@ -379,13 +571,13 @@ body {
   width: 100%;
 }
 
-@media only screen and (min-width: 1171px) {
+@media only screen and (min-width: 1366px) {
   body {
     background-color: white;
   }
 }
 
-@media only screen and (max-width: 1170px) {
+@media only screen and (max-width: 1365px) {
   body {
     background-color: white;
   }

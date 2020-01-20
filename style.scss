@@ -1,7 +1,7 @@
 @import "base";
 
 main {
-    height: 500px;
+    height: 647px;
 
     @include media(pc) {
         width: 1366px;
@@ -116,11 +116,27 @@ main {
     }
 }
 
+.menu {
+    display: flex;
+    &__element {
+        @extend %base;
+        margin: 5px;
+        padding-left: 5px;
+        border-left: #653f36 1px solid;
+    }
 
+    &__element:last-child {
+        padding-right: 5px;
+        border-right: #653f36 1px solid;
+    }
+}
+
+.nav {
+    display: flex;
+}
 
 .footer {
     @extend %base;
-    background: #00ff00;
     height: 500px;
 
     @include media(pc) {
@@ -138,7 +154,6 @@ main {
 }
 
 .article {
-
     @include media(pc) {
         width: 1366px;
     };
@@ -149,45 +164,160 @@ main {
         width: 320px;
     };
 
+    &__h2 {
+        @extend %base;
+
+        @include media(pc) {
+            width: 1366px;
+        };
+        @include media(tab) {
+            width: 414px;
+        };
+        @include media(sp) {
+            width: 320px;
+        };
+    
+        color: #653f36;
+        font-size: 25px;
+    }
     &__section {
-        &_img1 {
-            object-fit: cover;
-            object-position: right;
-            width: 0px;
-            height: 420px;
+        &_h3 {
+            color: #653f36;
+            font-size: 25px;
+        }
+        &_p {
+            width: 300px;
+            height: 200px;
+        }
+        &_text1 {
             position: relative;
             left: 0px;
+            top: -300px;
+        }
+        &_text2 {
+            position: relative;
+            left: 0px;
+            top: -300px;
+        }
+        &_text3 {
+            position: relative;
+            left: 0px;
+            top: -300px;
+        }
+        &_text4 {
+            position: relative;
+            left: 0px;
+            top: -300px;
+        }
+
+        &_img1 {
+            position: relative;
+            left: -330px;
         }
         &_img2 {
-            object-fit: cover;
-            object-position: left;
-            width: 0px;
-            height: 420px;
             position: relative;
             left: 1366px;
         }
         &_img3 {
-            object-fit: cover;
-            object-position: right;
-            width: 0px;
-            height: 420px;
             position: relative;
             left: 0px;
         }
         &_img4 {
-            object-fit: cover;
-            object-position: left;
-            width: 0px;
-            height: 420px;
             position: relative;
             left: 1366px;
+        }
+    }
+
+    &__section1 {
+        @include media(pc) {
+            width: 1366px;
+            height: 500px;
+        };
+        @include media(tab) {
+            width: 414px;
+        };
+        @include media(sp) {
+            width: 320px;
+        };
+        overflow: hidden;
+        object-fit: cover;
+        object-position: left;
+    }
+    &__section2 {
+        @include media(pc) {
+            width: 1366px;
+            height: 500px;
+        };
+        @include media(tab) {
+            width: 414px;
+        };
+        @include media(sp) {
+            width: 320px;
+        };
+        overflow: hidden;
+        object-fit: cover;
+        object-position: right;
+    }
+    &__section3 {
+        @include media(pc) {
+            width: 1366px;
+            height: 500px;
+        };
+        @include media(tab) {
+            width: 414px;
+        };
+        @include media(sp) {
+            width: 320px;
+        };
+        overflow: hidden;
+        object-fit: cover;
+        object-position: left;
+    }
+
+    &__section4 {
+        @include media(pc) {
+            width: 1366px;
+            height: 500px;
+        };
+        @include media(tab) {
+            width: 414px;
+        };
+        @include media(sp) {
+            width: 320px;
+        };
+        overflow: hidden;
+        object-fit: cover;
+        object-position: right;
+    }
+
+    &__news {
+        &_ul {
+            @extend %base;
+            @include media(pc) {
+                width: 1366px;
+            };
+            @include media(tab) {
+                width: 414px;
+            };
+            @include media(sp) {
+                width: 320px;
+            };
+            list-style: none;                
+        }
+        &_li {
+            border-top: #fff6e6 1px solid;
+            width: 600px;
+            padding: 20px;
+        }
+        &_h3 {
+            font-size: 20px;
+            color: #653f36;
         }
     }
 }
 
 .header {
     @extend %base;
-    background: #00ff00;
 
     @include media(pc) {
         width: 1366px;

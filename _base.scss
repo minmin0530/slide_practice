@@ -6,8 +6,8 @@
 }
 
 $breakpoints: (
-    pc:  "only screen and (min-width: 1171px)", // PC
-    tab: "only screen and (max-width: 1170px)",  // タブレット
+    pc:  "only screen and (min-width: 1366px)", // PC
+    tab: "only screen and (max-width: 1365px)",  // タブレット
     sp:  "only screen and (max-width: 414px)",  // スマホ
 );
 
