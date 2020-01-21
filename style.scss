@@ -236,11 +236,18 @@ main {
 
 .footer {
     @extend %base;
-    height: 500px;
 
     @include media(pc) {
         width: 1366px;
+        height: 400px;
         background-image: url("./img/footer/background.png");
+
+        &__wrap {
+            padding-top: 120px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     };
     @include media(tab) {
         width: 414px;
@@ -250,6 +257,17 @@ main {
         width: 320px;
         background-image: url("./img/footer/background.png");
     };
+
+    &__privacypolicy {
+        padding-top: 50px;
+    }
+    &__copyright {
+        @extend %base;
+        position: relative;
+        width: 100%;
+        background: #653f36;
+        color: white;
+    }
 }
 
 .article {
