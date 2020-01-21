@@ -1,4 +1,18 @@
 window.onload = function() {
+    const ham = document.getElementsByClassName("ham")[0];
+    ham.addEventListener("click", function(){
+        const ham_menu = document.getElementsByClassName("ham__menu")[0];
+        ham_menu.classList.remove("passive");
+        ham_menu.classList.add("active");
+    }, false);
+
+    const ham_close = document.getElementsByClassName("ham__menu_close")[0];
+    ham_close.addEventListener("click", function(){
+        const ham_menu = document.getElementsByClassName("ham__menu")[0];
+        ham_menu.classList.remove("active");
+        ham_menu.classList.add("passive");
+    }, false);
+
     window.addEventListener( "scroll", function () {
         const scrollTop = document.scrollingElement.scrollTop;
         if (scrollTop <= 700) {

@@ -1,5 +1,67 @@
 @import "base";
 
+
+.ham {
+    @include media(pc) {
+        display: none;
+    };
+    @include media(tab) {
+        display: inline;
+    };
+    @include media(sp) {
+        display: inline;
+    };
+
+    &__menu {
+        @include media(pc) {
+            display: none;
+        };
+        @include media(tab) {
+            display: inline;
+        };
+        @include media(sp) {
+            display: inline;
+        };
+
+        background: #fff6e6;
+        z-index: 4;
+
+        &_close {
+            padding-left: 300px;
+        }
+
+        &_element {
+            @extend %base;
+            width: 220px;
+            height: 60px;
+            background: white;
+            border: #653f36 1px solid;
+            border-radius: 9px;
+            margin-bottom: 21px;
+        }
+    }
+
+    &__menu.passive {
+        @extend %base;
+
+        position: fixed;
+        top: -600px;
+    }
+    &__menu.active {
+        @extend %base;
+
+        top: 0px;
+        position: fixed;
+        animation   : hamAnime 0.5s linear 1;
+
+        @keyframes hamAnime {
+            0% { transform: translateY(-200%)}
+          100% { transform: translateY(0%)}
+        }
+    
+    }
+}
+
 main {
     height: 647px;
 
@@ -116,8 +178,34 @@ main {
     }
 }
 
+.logo {
+    @include media(pc) {
+        width: 423px;
+    };
+    @include media(tab) {
+        width: 211px;
+        height: 31px;
+    };
+    @include media(sp) {
+        width: 140px;
+        height: 20px;
+    };
+}
+
+.contact {
+    @include media(pc) {
+        display: inline;
+    };
+    @include media(tab) {
+        display: none;
+    };
+    @include media(sp) {
+        display: none;
+    };
+
+}
+
 .menu {
-    display: flex;
     &__element {
         @extend %base;
         margin: 5px;
@@ -129,6 +217,17 @@ main {
         padding-right: 5px;
         border-right: #653f36 1px solid;
     }
+
+    @include media(pc) {
+        display: flex;
+    };
+    @include media(tab) {
+        display: none;
+    };
+    @include media(sp) {
+        display: none;
+    };
+    
 }
 
 .nav {
