@@ -63,13 +63,14 @@
 }
 
 main {
-    height: 647px;
 
     @include media(pc) {
         width: 1366px;
+        height: 647px;
     };
     @include media(tab) {
         width: 414px;
+        height: 583px;
     };
     @include media(sp) {
         width: 320px;
@@ -93,8 +94,19 @@ main {
         z-index: 2;
         object-fit: cover;
         object-position: left;
-        height: 450px;
-        width: 570px;
+
+        @include media(pc) {
+            height: 450px;
+            width: 570px;
+        };
+        @include media(tab) {
+            top: 200px;
+            width: 340px;
+        };
+        @include media(sp) {
+            width: 300px;
+        };
+    
     }
     &_textimg {
         position: relative;
@@ -102,34 +114,87 @@ main {
         left: -100px;
         object-fit: cover;
         object-position: left;
-        height: 392px;
-        width: 392px;
+
+        @include media(pc) {
+            height: 392px;
+            width: 392px;
+        };
+        @include media(tab) {
+            top: 0px;
+            left: -320px;
+            width: 300px;
+        };
+        @include media(sp) {
+            top: 0px;
+            left: -300px;
+            width: 300px;
+        };
+
     }
     &_text {
         position: relative;
         z-index: 2;
-        font-size: 48px;
         writing-mode: vertical-rl;
-        left: 500px;
-        top: -300px;
         object-fit: cover;
         object-position: left;
         height: 420px;
         width: 200px;
+
+        @include media(pc) {
+            font-size: 48px;
+            left: 500px;
+            top: -300px;
+        };
+        @include media(tab) {
+            font-size: 40px;
+            left: 0px;
+            top: -250px;    
+        };
+        @include media(sp) {
+            font-size: 40px;
+            left: 0px;
+            top: -250px;    
+        };
     }
-    @keyframes scrollAnime1{
-        0% { transform: translateX(100%)}
-       13% { transform: translateX(100%)}
-       25% { transform: translateX(30%)}
-       75% { transform: translateX(30%)}
-      100% { transform: translateX(-100%)}
-    }
+
+    @include media(pc) {
+        @keyframes scrollAnime1{
+            0% { transform: translateX(100%)}
+           13% { transform: translateX(100%)}
+           25% { transform: translateX(30%)}
+           65% { transform: translateX(30%)}
+           77% { transform: translateX(-100%)}
+          100% { transform: translateX(-100%)}
+        }
+    };
+    @include media(tab) {
+        @keyframes scrollAnime1{
+            0% { transform: translateX(100%)}
+           13% { transform: translateX(100%)}
+           25% { transform: translateX(10%)}
+           65% { transform: translateX(10%)}
+           77% { transform: translateX(-100%)}
+          100% { transform: translateX(-100%)}
+        }
+    };
+    @include media(sp) {
+        @keyframes scrollAnime1{
+            0% { transform: translateX(100%)}
+           13% { transform: translateX(100%)}
+           25% { transform: translateX(5%)}
+           65% { transform: translateX(5%)}
+           77% { transform: translateX(-100%)}
+          100% { transform: translateX(-100%)}
+        }
+    };
+
+
+
 }
 
 .mainvisual2 {
     position: relative;
     left: 0px;
-    top: -850px;
 
     text-overflow: clip;
     white-space: nowrap;    
@@ -141,41 +206,109 @@ main {
         z-index: 2;
         object-fit: cover;
         object-position: left;
-        height: 450px;
-        width: 570px;
+        @include media(pc) {
+            top: -850px;
+            height: 450px;
+            width: 570px;
+        };
+        @include media(tab) {
+            top: -530px;
+            width: 340px;
+        };
+        @include media(sp) {
+            top: -550px;
+            width: 300px;
+        };
     }
     &_textimg {
         position: relative;
         z-index: 1;
-        left: -100px;
         object-fit: cover;
         object-position: left;
-        height: 392px;
-        width: 392px;
+        @include media(pc) {
+            left: -100px;
+            top: -900px;
+            height: 392px;
+            width: 392px;
+        };
+        @include media(tab) {
+            top: -730px;
+            left: -330px;
+            width: 300px;
+        };
+        @include media(sp) {
+            top: -730px;
+            left: -330px;
+            width: 300px;
+        };
     }
     &_text {
         position: relative;
         z-index: 2;
-        font-size: 48px;
         writing-mode: vertical-rl;
-        left: 500px;
-        top: -300px;
         object-fit: cover;
         object-position: left;
-        height: 420px;
-        width: 200px;
+
+        @include media(pc) {
+            font-size: 48px;
+            left: 500px;
+            top: -1200px;
+            height: 420px;
+            width: 200px;
+        };
+        @include media(tab) {
+            font-size: 40px;
+            left: 60px;
+            top: -980px;    
+        };
+        @include media(sp) {
+            font-size: 40px;
+            left: 60px;
+            top: -980px;    
+        };
+
     }
-    @keyframes scrollAnime2{
-        0% { transform: translateX(30%)}
-       12% { transform: translateX(30%)}
-       25% { transform: translateX(-100%)}
-       26% { transform: translateY( 200%)}
-       27% { transform: translate(100%, 200%)}
-       28% { transform: translate(100%, 0%)}
-       75% { transform: translate(100%, 0%)}
-       88% { transform: translateX(30%)}
-      100% { transform: translateX(30%)}
-    }
+
+    @include media(pc) {
+        @keyframes scrollAnime2{
+            0% { transform: translateX(30%)}
+           12% { transform: translateX(30%)}
+           25% { transform: translateX(-100%)}
+           26% { transform: translateY( 200%)}
+           27% { transform: translate(100%, 200%)}
+           28% { transform: translate(100%, 0%)}
+           65% { transform: translate(100%, 0%)}
+           78% { transform: translateX(30%)}
+          100% { transform: translateX(30%)}
+        }
+    };
+    @include media(tab) {
+        @keyframes scrollAnime2{
+            0% { transform: translateX(10%)}
+           12% { transform: translateX(10%)}
+           25% { transform: translateX(-100%)}
+           26% { transform: translateY( 200%)}
+           27% { transform: translate(100%, 200%)}
+           28% { transform: translate(100%, 0%)}
+           65% { transform: translate(100%, 0%)}
+           78% { transform: translateX(10%)}
+          100% { transform: translateX(10%)}
+        }
+    };
+    @include media(sp) {
+        @keyframes scrollAnime2{
+            0% { transform: translateX(5%)}
+           12% { transform: translateX(5%)}
+           25% { transform: translateX(-100%)}
+           26% { transform: translateY( 200%)}
+           27% { transform: translate(100%, 200%)}
+           28% { transform: translate(100%, 0%)}
+           65% { transform: translate(100%, 0%)}
+           78% { transform: translateX(5%)}
+          100% { transform: translateX(5%)}
+        }
+    };
+
 }
 
 .logo {
@@ -308,18 +441,52 @@ main {
         }
         &_text1 {
             position: relative;
-            left: 0px;
-            top: -300px;
+
+            @include media(pc) {
+                left: 0px;
+                top: -300px;
+            };
+            @include media(tab) {
+                left: -200px;
+                top: -300px;
+                width: 350px;
+            };
+            @include media(sp) {
+            };
+    
         }
         &_text2 {
             position: relative;
-            left: 0px;
-            top: -300px;
+
+            @include media(pc) {
+                left: 0px;
+                top: -300px;
+            };
+            @include media(tab) {
+                left: -200px;
+                top: -300px;
+                width: 350px;
+            };
+            @include media(sp) {
+            };
+
+
         }
         &_text3 {
             position: relative;
-            left: 0px;
-            top: -300px;
+
+            @include media(pc) {
+                left: 0px;
+                top: -300px;
+            };
+            @include media(tab) {
+                left: 0px;
+                top: -300px;
+                width: 350px;
+            };
+            @include media(sp) {
+            };
+
         }
         &_text4 {
             position: relative;
@@ -329,19 +496,58 @@ main {
 
         &_img1 {
             position: relative;
-            left: -330px;
+            @include media(pc) {
+                left: -330px;
+            };
+            @include media(tab) {
+                left: -330px;
+                top: 200px;
+                width: 310px;
+            };
+            @include media(sp) {
+            };
         }
         &_img2 {
             position: relative;
-            left: 1366px;
+
+            @include media(pc) {
+                left: 1366px;
+            };
+            @include media(tab) {
+                left: 414px;
+                top: 200px;
+                width: 310px;
+            };
+            @include media(sp) {
+            };
         }
         &_img3 {
             position: relative;
-            left: 0px;
+            @include media(pc) {
+                left: 0px;
+            };
+            @include media(tab) {
+                left: 0px;
+                top: 200px;
+                width: 310px;
+            };
+            @include media(sp) {
+            };
         }
         &_img4 {
             position: relative;
-            left: 1366px;
+            @include media(pc) {
+                left: 1366px;
+            };
+            @include media(tab) {
+                left: 414px;
+                top: 200px;
+                width: 310px;
+            };
+            @include media(sp) {
+            };
+
+
         }
     }
 
