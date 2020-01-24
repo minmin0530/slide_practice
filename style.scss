@@ -472,6 +472,18 @@ main {
     
     }
 
+    &__schedule {
+        @include media(pc) {
+        };
+        @include media(tab) {
+            display: none;
+        };
+        @include media(sp) {
+            display: none;
+        };
+
+    }
+
     &__privacypolicy {
         padding-top: 50px;
     }
@@ -482,6 +494,20 @@ main {
         background: #653f36;
         color: white;
     }
+}
+table {
+    border: solid 1px #653f36;
+    border-collapse: collapse;
+}
+th {
+    background: #653f36;
+    color: white;
+    border: solid 1px #653f36;
+    border-collapse: collapse;
+}
+td {
+    border: solid 1px #653f36;
+    border-collapse: collapse;
 }
 
 .article {

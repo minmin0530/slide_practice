@@ -967,6 +967,18 @@ main {
   }
 }
 
+@media only screen and (max-width: 1365px) {
+  .footer__schedule {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  .footer__schedule {
+    display: none;
+  }
+}
+
 .footer__privacypolicy {
   padding-top: 50px;
 }
@@ -976,6 +988,23 @@ main {
   width: 100%;
   background: #653f36;
   color: white;
+}
+
+table {
+  border: solid 1px #653f36;
+  border-collapse: collapse;
+}
+
+th {
+  background: #653f36;
+  color: white;
+  border: solid 1px #653f36;
+  border-collapse: collapse;
+}
+
+td {
+  border: solid 1px #653f36;
+  border-collapse: collapse;
 }
 
 @media only screen and (min-width: 1366px) {
