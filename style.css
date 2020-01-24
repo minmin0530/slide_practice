@@ -46,17 +46,39 @@
 @media only screen and (max-width: 1365px) {
   .ham__menu {
     display: inline;
+    width: 414px;
   }
 }
 
 @media only screen and (max-width: 414px) {
   .ham__menu {
     display: inline;
+    width: 320px;
   }
 }
 
-.ham__menu_close {
-  padding-left: 300px;
+@media only screen and (max-width: 1365px) {
+  .ham__menu_close {
+    padding-left: 300px;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  .ham__menu_close {
+    padding-left: 200px;
+  }
+}
+
+@media only screen and (max-width: 1365px) {
+  .ham__menu_logo {
+    width: 414px;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  .ham__menu_logo {
+    width: 320px;
+  }
 }
 
 .ham__menu_element {

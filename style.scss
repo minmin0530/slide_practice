@@ -18,16 +18,36 @@
         };
         @include media(tab) {
             display: inline;
+            width: 414px;
         };
         @include media(sp) {
             display: inline;
+            width: 320px;
         };
 
         background: #fff6e6;
         z-index: 4;
 
         &_close {
-            padding-left: 300px;
+            @include media(pc) {
+            };
+            @include media(tab) {
+                padding-left: 300px;
+            };
+            @include media(sp) {
+                padding-left: 200px;
+            };
+        }
+
+        &_logo {
+            @include media(pc) {
+            };
+            @include media(tab) {
+                width: 414px;
+            };
+            @include media(sp) {
+                width: 320px;
+            };
         }
 
         &_element {
