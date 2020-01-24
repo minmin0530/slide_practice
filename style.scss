@@ -307,7 +307,7 @@ main {
             0% { transform: translateX(10%)}
            12% { transform: translateX(10%)}
            25% { transform: translateX(-100%)}
-           26% { transform: translateY( 200%)}
+           26% { transform: translateY( 400%)}
            27% { transform: translate(100%, 200%)}
            28% { transform: translate(100%, 0%)}
            65% { transform: translate(100%, 0%)}
@@ -320,7 +320,7 @@ main {
             0% { transform: translateX(5%)}
            12% { transform: translateX(5%)}
            25% { transform: translateX(-100%)}
-           26% { transform: translateY( 200%)}
+           26% { transform: translateY( 400%)}
            27% { transform: translate(100%, 200%)}
            28% { transform: translate(100%, 0%)}
            65% { transform: translate(100%, 0%)}
@@ -392,7 +392,7 @@ main {
 
     @include media(pc) {
         width: 1366px;
-        height: 400px;
+        height: 464px;
         background-image: url("./img/footer/background.png");
 
         &__wrap {
@@ -401,14 +401,63 @@ main {
             justify-content: center;
             align-items: center;
         }
+        &__static {
+            display: none;
+        }
     };
     @include media(tab) {
         width: 414px;
         background-image: url("./img/footer/background.png");
+
+        &__spacer {
+            height: 64px;
+        }
+
+        &__static {
+            height: 64px;
+            width: 414px;
+            background: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            bottom: 0px;
+            &_element {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                width: 33%;
+            }
+
+        }
     };
     @include media(sp) {
         width: 320px;
         background-image: url("./img/footer/background.png");
+
+        &__spacer {
+            height: 64px;
+        }
+        &__static {
+            height: 64px;
+            width: 320px;
+            background: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            bottom: 0px;
+
+            &_element {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                width: 33%;
+                font-size: 0.9em;
+            }
+        }
     };
 
     &__logo {
@@ -451,16 +500,23 @@ main {
 
         @include media(pc) {
             width: 1366px;
+            font-size: 25px;
         };
         @include media(tab) {
             width: 414px;
+            font-size: 1.2em;
         };
         @include media(sp) {
             width: 320px;
+            font-size: 1.1em;
         };
+
+        &_span {
+            border-bottom: dashed 1px #653f36;
+
+        }
     
         color: #653f36;
-        font-size: 25px;
     }
     &__section {
         &_h3 {
@@ -701,22 +757,51 @@ main {
             border-top: #fff6e6 1px solid;
 
             @include media(pc) {
-                width: 600px;
+                width: 722px;
                 padding: 20px;
             };
             @include media(tab) {
                 width: 380px;
-                padding: 0px;
+                padding: 20px;
             };
             @include media(sp) {
                 width: 280px;
-                padding: 0px;
+                padding: 20px;
             };
 
         }
         &_h3 {
-            font-size: 20px;
             color: #653f36;
+            @include media(pc) {
+                font-size: 1.6em;
+            };
+            @include media(tab) {
+                font-size: 1.5em;
+            };
+            @include media(sp) {
+                font-size: 1.15em;
+            };
+
+        }
+        &_span {
+            @include media(pc) {
+            };
+            @include media(tab) {
+                display: none;
+            };
+            @include media(sp) {
+                display: none;
+            };
+        }
+        &_div {
+            @include media(pc) {
+            };
+            @include media(tab) {
+                font-size: 0.9em;
+            };
+            @include media(sp) {
+                font-size: 0.8em;
+            };
         }
     }
 }
