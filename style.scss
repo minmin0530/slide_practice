@@ -391,6 +391,18 @@ main {
         background-image: url("./img/footer/background.png");
     };
 
+    &__logo {
+        @include media(pc) {
+        };
+        @include media(tab) {
+            width: 380px;
+        };
+        @include media(sp) {
+            width: 280px;
+        };
+    
+    }
+
     &__privacypolicy {
         padding-top: 50px;
     }
@@ -452,6 +464,9 @@ main {
                 width: 350px;
             };
             @include media(sp) {
+                left: -200px;
+                top: -300px;
+                width: 260px;
             };
     
         }
@@ -468,6 +483,9 @@ main {
                 width: 350px;
             };
             @include media(sp) {
+                left: -200px;
+                top: -300px;
+                width: 280px;
             };
 
 
@@ -485,13 +503,30 @@ main {
                 width: 350px;
             };
             @include media(sp) {
+                left: 0px;
+                top: -300px;
+                width: 280px;
             };
 
         }
         &_text4 {
             position: relative;
-            left: 0px;
-            top: -300px;
+
+            @include media(pc) {
+                left: 0px;
+                top: -300px;
+                };
+            @include media(tab) {
+                left: 0px;
+                top: -300px;
+                width: 350px;
+            };
+            @include media(sp) {
+                left: 0px;
+                top: -300px;
+                width: 280px;
+            };
+
         }
 
         &_img1 {
@@ -505,6 +540,9 @@ main {
                 width: 310px;
             };
             @include media(sp) {
+                left: -330px;
+                top: 200px;
+                width: 280px;
             };
         }
         &_img2 {
@@ -519,6 +557,9 @@ main {
                 width: 310px;
             };
             @include media(sp) {
+                left: 320px;
+                top: 200px;
+                width: 280px;
             };
         }
         &_img3 {
@@ -532,6 +573,9 @@ main {
                 width: 310px;
             };
             @include media(sp) {
+                left: 0px;
+                top: 200px;
+                width: 280px;
             };
         }
         &_img4 {
@@ -545,6 +589,9 @@ main {
                 width: 310px;
             };
             @include media(sp) {
+                left: 320px;
+                top: 200px;
+                width: 280px;
             };
 
 
@@ -618,19 +665,34 @@ main {
             @extend %base;
             @include media(pc) {
                 width: 1366px;
+                padding: 0px;
             };
             @include media(tab) {
                 width: 414px;
+                padding: 0px;
             };
             @include media(sp) {
                 width: 320px;
+                padding: 0px;
             };
             list-style: none;                
         }
         &_li {
             border-top: #fff6e6 1px solid;
-            width: 600px;
-            padding: 20px;
+
+            @include media(pc) {
+                width: 600px;
+                padding: 20px;
+            };
+            @include media(tab) {
+                width: 380px;
+                padding: 0px;
+            };
+            @include media(sp) {
+                width: 280px;
+                padding: 0px;
+            };
+
         }
         &_h3 {
             font-size: 20px;
