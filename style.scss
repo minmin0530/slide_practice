@@ -392,7 +392,7 @@ main {
 
     @include media(pc) {
         width: 1366px;
-        height: 464px;
+        height: 400px;
         background-image: url("./img/footer/background.png");
 
         &__wrap {
@@ -407,10 +407,22 @@ main {
     };
     @include media(tab) {
         width: 414px;
+        height: 480px;
+
         background-image: url("./img/footer/background.png");
 
         &__spacer {
-            height: 64px;
+            @include media(pc) {
+                height: 0px;
+                display: none;
+            };
+            @include media(tab) {
+                height: 64px;
+            };
+            @include media(sp) {
+                height: 64px;
+            };
+    
         }
 
         &__static {
@@ -429,11 +441,18 @@ main {
                 flex-direction: column;
                 width: 33%;
             }
+        }
 
+        &__wrap {
+            display: flex;
+            flex-direction: column;
+            margin-top: auto;
         }
     };
     @include media(sp) {
         width: 320px;
+        height: 480px;
+
         background-image: url("./img/footer/background.png");
 
         &__spacer {
@@ -458,6 +477,12 @@ main {
                 font-size: 0.9em;
             }
         }
+        &__wrap {
+            display: flex;
+            flex-direction: column;
+            margin-top: auto;
+        }
+
     };
 
     &__logo {
@@ -481,11 +506,43 @@ main {
         @include media(sp) {
             display: none;
         };
+    }
 
+    &__contact {
+        display: flex;
+    }
+    &__mail {
+        &_span {
+            border-radius: 5px;
+            padding: 10px;
+            border: 1px solid #a33143;
+            background: white;
+            @include media(pc) {
+                font-size: 1em;
+            };
+            @include media(tab) {
+                font-size: 0.8em;
+            };
+            @include media(sp) {
+                font-size: 0.7em;
+            };
+    
+        }
+    }
+    &__tel {
+        &_number {
+            font-size: 1.2em;
+        }
+        &_time {
+            font-size: 0.8em;
+        }
     }
 
     &__privacypolicy {
         padding-top: 50px;
+        position: relative;
+        bottom: 0px;
+
     }
     &__copyright {
         @extend %base;
@@ -493,6 +550,8 @@ main {
         width: 100%;
         background: #653f36;
         color: white;
+        bottom: 0px;
+
     }
 }
 table {

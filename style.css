@@ -850,7 +850,7 @@ main {
 @media only screen and (min-width: 1366px) {
   .footer {
     width: 1366px;
-    height: 464px;
+    height: 400px;
     background-image: url("./img/footer/background.png");
   }
   .footer__wrap {
@@ -873,11 +873,31 @@ main {
 @media only screen and (max-width: 1365px) {
   .footer {
     width: 414px;
+    height: 480px;
     background-image: url("./img/footer/background.png");
   }
+}
+
+@media only screen and (max-width: 1365px) and (min-width: 1366px) {
+  .footer__spacer {
+    height: 0px;
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1365px) and (max-width: 1365px) {
   .footer__spacer {
     height: 64px;
   }
+}
+
+@media only screen and (max-width: 1365px) and (max-width: 414px) {
+  .footer__spacer {
+    height: 64px;
+  }
+}
+
+@media only screen and (max-width: 1365px) {
   .footer__static {
     height: 64px;
     width: 414px;
@@ -910,11 +930,22 @@ main {
             flex-direction: column;
     width: 33%;
   }
+  .footer__wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: auto;
+  }
 }
 
 @media only screen and (max-width: 414px) {
   .footer {
     width: 320px;
+    height: 480px;
     background-image: url("./img/footer/background.png");
   }
   .footer__spacer {
@@ -953,6 +984,16 @@ main {
     width: 33%;
     font-size: 0.9em;
   }
+  .footer__wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: auto;
+  }
 }
 
 @media only screen and (max-width: 1365px) {
@@ -979,8 +1020,49 @@ main {
   }
 }
 
+.footer__contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer__mail_span {
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid #a33143;
+  background: white;
+}
+
+@media only screen and (min-width: 1366px) {
+  .footer__mail_span {
+    font-size: 1em;
+  }
+}
+
+@media only screen and (max-width: 1365px) {
+  .footer__mail_span {
+    font-size: 0.8em;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  .footer__mail_span {
+    font-size: 0.7em;
+  }
+}
+
+.footer__tel_number {
+  font-size: 1.2em;
+}
+
+.footer__tel_time {
+  font-size: 0.8em;
+}
+
 .footer__privacypolicy {
   padding-top: 50px;
+  position: relative;
+  bottom: 0px;
 }
 
 .footer__copyright {
@@ -988,6 +1070,7 @@ main {
   width: 100%;
   background: #653f36;
   color: white;
+  bottom: 0px;
 }
 
 table {
