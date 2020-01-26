@@ -34,12 +34,12 @@ window.onload = function() {
             if (1300 <= scrollTop && scrollTop <= 1600) {
                 document.getElementsByClassName("article__section_img3")[0].style.left = scrollTop + 50 - 1350 + "px";
                 document.getElementsByClassName("article__section_text3")[0].style.left = scrollTop - 430 - 400 + "px";
-                document.getElementsByClassName("article__section_text4")[0].style.left = 1366 + 1000 - scrollTop + "px";
-                document.getElementsByClassName("article__section_img4")[0].style.left = 1366 + 1300 - scrollTop + "px";
+                document.getElementsByClassName("article__section_text4")[0].style.left = 1366 + 900 - scrollTop + "px";
+                document.getElementsByClassName("article__section_img4")[0].style.left = 1366 + 1200 - scrollTop + "px";
             }
-            if (1700 <= scrollTop && scrollTop <= 2000) {
-                document.getElementsByClassName("article__section_text4")[0].style.left = 1366 + 1000 - scrollTop + "px";
-                document.getElementsByClassName("article__section_img4")[0].style.left = 1366 + 1300 - scrollTop + "px";
+            if (1600 <= scrollTop && scrollTop <= 1900) {
+                document.getElementsByClassName("article__section_text4")[0].style.left = 1366 + 900 - scrollTop + "px";
+                document.getElementsByClassName("article__section_img4")[0].style.left = 1366 + 1200 - scrollTop + "px";
             }
         
         } else if (window.innerWidth < 1366 && window.innerWidth >= 414) {

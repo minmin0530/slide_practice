@@ -32,9 +32,11 @@
             @include media(pc) {
             };
             @include media(tab) {
+                margin-top: 20px;
                 padding-left: 300px;
             };
             @include media(sp) {
+                margin-top: 20px;
                 padding-left: 200px;
             };
         }
@@ -44,9 +46,11 @@
             };
             @include media(tab) {
                 width: 414px;
+                padding-bottom: 20px;
             };
             @include media(sp) {
                 width: 320px;
+                padding-bottom: 20px;
             };
         }
 
@@ -57,7 +61,7 @@
             background: white;
             border: #653f36 1px solid;
             border-radius: 9px;
-            margin-bottom: 21px;
+            margin-bottom: 41px;
         }
     }
 
@@ -65,7 +69,7 @@
         @extend %base;
 
         position: fixed;
-        top: -600px;
+        top: -800px;
     }
     &__menu.active {
         @extend %base;
@@ -78,7 +82,6 @@
             0% { transform: translateY(-200%)}
           100% { transform: translateY(0%)}
         }
-    
     }
 }
 
@@ -124,6 +127,7 @@ main {
             width: 340px;
         };
         @include media(sp) {
+            top: 180px;
             width: 300px;
         };
     
@@ -172,7 +176,7 @@ main {
         };
         @include media(sp) {
             font-size: 40px;
-            left: 0px;
+            left: -20px;
             top: -250px;    
         };
     }
@@ -258,7 +262,7 @@ main {
         };
         @include media(sp) {
             top: -730px;
-            left: -330px;
+            left: -300px;
             width: 300px;
         };
     }
@@ -392,7 +396,7 @@ main {
 
     @include media(pc) {
         width: 1366px;
-        height: 400px;
+        height: 460px;
         background-image: url("./img/footer/background.png");
 
         &__wrap {
@@ -407,7 +411,7 @@ main {
     };
     @include media(tab) {
         width: 414px;
-        height: 480px;
+        height: 600px;
 
         background-image: url("./img/footer/background.png");
 
@@ -451,7 +455,7 @@ main {
     };
     @include media(sp) {
         width: 320px;
-        height: 480px;
+        height: 580px;
 
         background-image: url("./img/footer/background.png");
 
@@ -486,10 +490,14 @@ main {
     };
 
     &__logo {
+        border-bottom: dashed 1px #653f36;
+        padding-bottom: 5px;
+        margin-bottom: 5px;
         @include media(pc) {
+            width: 360px;
         };
         @include media(tab) {
-            width: 380px;
+            width: 360px;
         };
         @include media(sp) {
             width: 280px;
@@ -512,37 +520,112 @@ main {
         display: flex;
     }
     &__mail {
+        margin-top: 10px;
         &_span {
             border-radius: 5px;
             padding: 10px;
             border: 1px solid #a33143;
             background: white;
+            color: #a33143;
             @include media(pc) {
-                font-size: 1em;
+                font-size: 0.8em;
             };
             @include media(tab) {
                 font-size: 0.8em;
             };
             @include media(sp) {
                 font-size: 0.7em;
-            };
-    
+            };    
         }
     }
     &__tel {
+        margin-left: 10px;
         &_number {
             font-size: 1.2em;
         }
         &_time {
-            font-size: 0.8em;
+            font-size: 0.6em;
         }
     }
 
+    &__iframe {
+        margin-left: 10px;
+        @include media(pc) {
+            width: 350px;
+            height: 250px;
+        };
+        @include media(tab) {
+            width: 350px;
+            height: 250px;
+        };
+        @include media(sp) {
+            width: 280px;
+            height: 200px;
+        };
+    }
+
+    &__addresswrap {
+        @include media(pc) {
+            display: flex;
+        };
+        @include media(tab) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        };
+        @include media(sp) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        };
+
+
+    }
+
+    &__address {
+        font-size: 0.7em;
+    }
+
+    &__googlemap {
+        border-radius: 5px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border: 1px solid #a33143;
+        background: white;
+        color: #a33143;
+        @include media(pc) {
+            font-size: 0.7em;
+            padding-left: 25px;
+            padding-right: 25px;
+            margin-left: 10px;
+        };
+        @include media(tab) {
+            font-size: 0.6em;
+            padding-left: 25px;
+            padding-right: 25px;    
+            margin-left: 10px;
+        };
+        @include media(sp) {
+            font-size: 0.5em;
+            padding-left: 15px;
+            padding-right: 15px;    
+            margin-left: 5px;
+        };    
+
+    }
+
     &__privacypolicy {
-        padding-top: 50px;
+        padding-top: 20px;
         position: relative;
         bottom: 0px;
 
+        &_contact {
+            border-right: #653f36 1px solid;
+            padding-right: 10px;
+            margin-right: 10px;
+        }
     }
     &__copyright {
         @extend %base;
@@ -563,10 +646,14 @@ th {
     color: white;
     border: solid 1px #653f36;
     border-collapse: collapse;
+    font-size: 0.8em;
+    font-weight: 100;
 }
 td {
     border: solid 1px #653f36;
     border-collapse: collapse;
+    background: white;
+    padding: 10px;
 }
 
 .article {
