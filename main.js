@@ -13,19 +13,59 @@ window.onload = function() {
         ham_menu.classList.add("passive");
     }, false);
 
+
+    let scrollTop = 0;
+    let x1 = 0;
+    let x2 = 0;
+    let x3 = 0;
+    let x4 = 0;
+    if (window.innerWidth >= 1366) {
+        x2 = 1366;
+    } else if (window.innerWidth < 1366 && window.innerWidth >= 414) {
+        x2 = 414;
+    } else {
+        x2 = 320;
+    }
+    let section1Flag = false;
+    let section2Flag = false;
+    let section3Flag = false;
+    let section4Flag = false;
+
+    loop();
+
+    function loop() {
+
+        if (scrollTop >= 300) {            section1Flag = true;        }
+        if (scrollTop >= 700) {            section2Flag = true;        }
+        if (section1Flag && x1 < 700) {
+            x1 += 10;
+            document.getElementsByClassName("article__section_img1")[0].style.left = x1 - 430 + "px";
+            document.getElementsByClassName("article__section_text1")[0].style.left = x1 + 50 + "px";
+        }
+
+        if (section2Flag && x2 > 300) {
+            x2 -= 10;
+            document.getElementsByClassName("article__section_text2")[0].style.left =  x2 + "px";
+            document.getElementsByClassName("article__section_img2")[0].style.left =  300 + x2 + "px";
+        }
+
+        requestAnimationFrame(loop);
+    }
+
+
     window.addEventListener( "scroll", function () {
-        const scrollTop = document.scrollingElement.scrollTop;
+        scrollTop = document.scrollingElement.scrollTop;
 
         if (window.innerWidth >= 1366) {
             if (scrollTop <= 700) {
-                document.getElementsByClassName("article__section_img1")[0].style.left = scrollTop - 430 + "px";
-                document.getElementsByClassName("article__section_text1")[0].style.left = scrollTop + 50 + "px";
-                document.getElementsByClassName("article__section_text2")[0].style.left = 1366 - scrollTop + "px";
-                document.getElementsByClassName("article__section_img2")[0].style.left = 1366 + 300 - scrollTop + "px";
+                // document.getElementsByClassName("article__section_img1")[0].style.left = scrollTop - 430 + "px";
+                // document.getElementsByClassName("article__section_text1")[0].style.left = scrollTop + 50 + "px";
+                // document.getElementsByClassName("article__section_text2")[0].style.left = 1366 - scrollTop + "px";
+                // document.getElementsByClassName("article__section_img2")[0].style.left = 1366 + 300 - scrollTop + "px";
             }
             if (700 <= scrollTop && scrollTop <= 1000) {
-                document.getElementsByClassName("article__section_text2")[0].style.left = 1366 - scrollTop + "px";
-                document.getElementsByClassName("article__section_img2")[0].style.left = 1366 + 300 - scrollTop + "px";
+                // document.getElementsByClassName("article__section_text2")[0].style.left = 1366 - scrollTop + "px";
+                // document.getElementsByClassName("article__section_img2")[0].style.left = 1366 + 300 - scrollTop + "px";
             }
             if (700 <= scrollTop && scrollTop <= 1300) {
                 document.getElementsByClassName("article__section_img3")[0].style.left = scrollTop + 50 - 1350 + "px";
