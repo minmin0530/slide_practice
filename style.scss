@@ -89,11 +89,11 @@ main {
 
     @include media(pc) {
         width: 1366px;
-        height: 647px;
+        // height: 647px;
     };
     @include media(tab) {
         width: 414px;
-        height: 583px;
+        // height: 583px;
     };
     @include media(sp) {
         width: 320px;
@@ -394,10 +394,16 @@ main {
 .footer {
     @extend %base;
 
+    margin: 0px;
+    width: 100%;
+    background-image: url("./img/footer/background.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+
     @include media(pc) {
-        width: 1366px;
-        height: 460px;
-        background-image: url("./img/footer/background.png");
+        // width: 1366px;
+        // height: 460px;
+        // background-image: url("./img/footer/background.png");
 
         &__wrap {
             padding-top: 120px;
@@ -410,10 +416,10 @@ main {
         }
     };
     @include media(tab) {
-        width: 414px;
-        height: 600px;
+        // width: 414px;
+        // height: 600px;
 
-        background-image: url("./img/footer/background.png");
+        // background-image: url("./img/footer/background.png");
 
         &__spacer {
             @include media(pc) {
@@ -454,10 +460,10 @@ main {
         }
     };
     @include media(sp) {
-        width: 320px;
-        height: 580px;
+        // width: 320px;
+        // height: 580px;
 
-        background-image: url("./img/footer/background.png");
+        // background-image: url("./img/footer/background.png");
 
         &__spacer {
             height: 64px;
@@ -813,7 +819,7 @@ td {
         &_img3 {
             position: relative;
             @include media(pc) {
-                left: 0px;
+                left: -330px;
             };
             @include media(tab) {
                 left: 0px;
@@ -980,19 +986,25 @@ td {
 
 .header {
     @extend %base;
+    margin: 0px;
+    width: 100%;
+    background-image: url("./img/header/background.png");
+    background-repeat: no-repeat;
+    background-size: 100% 710px;
 
-    @include media(pc) {
-        width: 1366px;
-        background-image: url("./img/header/background.png");
-    };
-    @include media(tab) {
-        width: 414px;
-        background-image: url("./img/sp/background.png");
-    };
-    @include media(sp) {
-        width: 320px;
-        background-image: url("./img/sp/background.png");
-    };
+
+    // @include media(pc) {
+    //     width: 1366px;
+    //     background-image: url("./img/header/background.png");
+    // };
+    // @include media(tab) {
+    //     width: 414px;
+    //     background-image: url("./img/sp/background.png");
+    // };
+    // @include media(sp) {
+    //     width: 320px;
+    //     background-image: url("./img/sp/background.png");
+    // };
 }
 
 body {
