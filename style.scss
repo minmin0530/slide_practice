@@ -89,14 +89,17 @@ main {
 
     @include media(pc) {
         width: 1366px;
+        height: 700px;
         // height: 647px;
     };
     @include media(tab) {
         width: 414px;
+        height: 700px;
         // height: 583px;
     };
     @include media(sp) {
         width: 320px;
+        height: 700px;
     };
 
     overflow: hidden;

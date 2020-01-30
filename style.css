@@ -135,18 +135,21 @@ main {
 @media only screen and (min-width: 1366px) {
   main {
     width: 1366px;
+    height: 700px;
   }
 }
 
 @media only screen and (max-width: 1365px) {
   main {
     width: 414px;
+    height: 700px;
   }
 }
 
 @media only screen and (max-width: 414px) {
   main {
     width: 320px;
+    height: 700px;
   }
 }
 
