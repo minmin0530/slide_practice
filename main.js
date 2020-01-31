@@ -26,8 +26,8 @@ window.onload = function() {
         x2 = window.innerWidth;
         x4 = window.innerWidth;
     } else {
-        x2 = 320;
-        x4 = 320;
+        x2 = 520;
+        x4 = 520;
     }
     let section1Flag = false;
     let section2Flag = false;
@@ -96,6 +96,33 @@ window.onload = function() {
             }
 
         } else {
+            if (scrollTop >=  400) {            section1Flag = true;        }
+            if (scrollTop >= 1000) {            section2Flag = true;        }
+            if (scrollTop >= 1600) {            section3Flag = true;        }
+            if (scrollTop >= 2100) {            section4Flag = true;        }
+            if (section1Flag && x1 < 320) {
+                x1 += 10;
+                document.getElementsByClassName("article__section_img1")[0].style.left = x1 - 300 + "px";
+                document.getElementsByClassName("article__section_text1")[0].style.left = x1 - 300 + "px";
+            }
+
+            if (section2Flag && x2 > 320) {
+                x2 -= 10;
+                document.getElementsByClassName("article__section_text2")[0].style.left = -300 + x2 + "px";
+                document.getElementsByClassName("article__section_img2")[0].style.left =  -300 + x2 + "px";
+            }
+
+            if (section3Flag && x3 < 320) {
+                x3 += 10;
+                document.getElementsByClassName("article__section_img3")[0].style.left = x3 - 300 + "px";
+                document.getElementsByClassName("article__section_text3")[0].style.left = x3 - 300 + "px";
+            }
+
+            if (section4Flag && x4 > 320) {
+                x4 -= 10;
+                document.getElementsByClassName("article__section_text4")[0].style.left = -300 + x4 + "px";
+                document.getElementsByClassName("article__section_img4")[0].style.left = -300 + x4 + "px";
+            }
 
         }
         requestAnimationFrame(loop);
@@ -150,22 +177,22 @@ window.onload = function() {
             // }
             
         } else {
-            if (scrollTop <= 500) {
-                document.getElementsByClassName("article__section_img1")[0].style.left = scrollTop - 490 + "px";
-                document.getElementsByClassName("article__section_text1")[0].style.left = scrollTop - 480 + "px";
-            }
-            if (700 <= scrollTop && scrollTop <= 1000) {
-                document.getElementsByClassName("article__section_text2")[0].style.left = 1020 - scrollTop + "px";
-                document.getElementsByClassName("article__section_img2")[0].style.left = 720 + 300 - scrollTop + "px";
-            }
-            if (1300 <= scrollTop && scrollTop <= 1600) {
-                document.getElementsByClassName("article__section_img3")[0].style.left = scrollTop - 1570 + "px";
-                document.getElementsByClassName("article__section_text3")[0].style.left = scrollTop - 1570 + "px";
-            }
-            if (1700 <= scrollTop && scrollTop <= 2000) {
-                document.getElementsByClassName("article__section_text4")[0].style.left = 1010 + 1000 - scrollTop + "px";
-                document.getElementsByClassName("article__section_img4")[0].style.left = 710 + 1300 - scrollTop + "px";
-            }
+            // if (scrollTop <= 500) {
+            //     document.getElementsByClassName("article__section_img1")[0].style.left = scrollTop - 490 + "px";
+            //     document.getElementsByClassName("article__section_text1")[0].style.left = scrollTop - 480 + "px";
+            // }
+            // if (700 <= scrollTop && scrollTop <= 1000) {
+            //     document.getElementsByClassName("article__section_text2")[0].style.left = 1020 - scrollTop + "px";
+            //     document.getElementsByClassName("article__section_img2")[0].style.left = 720 + 300 - scrollTop + "px";
+            // }
+            // if (1300 <= scrollTop && scrollTop <= 1600) {
+            //     document.getElementsByClassName("article__section_img3")[0].style.left = scrollTop - 1570 + "px";
+            //     document.getElementsByClassName("article__section_text3")[0].style.left = scrollTop - 1570 + "px";
+            // }
+            // if (1700 <= scrollTop && scrollTop <= 2000) {
+            //     document.getElementsByClassName("article__section_text4")[0].style.left = 1010 + 1000 - scrollTop + "px";
+            //     document.getElementsByClassName("article__section_img4")[0].style.left = 710 + 1300 - scrollTop + "px";
+            // }
             
         }
     }, false);

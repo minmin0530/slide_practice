@@ -340,7 +340,9 @@ main {
 
 .logo {
     @include media(pc) {
-        width: 423px;
+        width: 316px;
+        height: 46px;
+        margin-right: 10px;
     };
     @include media(tab) {
         width: 211px;
@@ -354,6 +356,7 @@ main {
 
 .contact {
     @include media(pc) {
+        margin-left: 20px;
         display: inline;
     };
     @include media(tab) {
@@ -368,13 +371,14 @@ main {
 .menu {
     &__element {
         @extend %base;
-        margin: 5px;
-        padding-left: 5px;
+        margin: 10px;
+        padding-left: 15px;
         border-left: #653f36 1px solid;
     }
 
     &__element:last-child {
-        padding-right: 5px;
+        padding-right: 10px;
+        margin-right: 10px;
         border-right: #653f36 1px solid;
     }
 
@@ -401,13 +405,11 @@ main {
     width: 100%;
     background-image: url("./img/footer/background.png");
     background-repeat: no-repeat;
-    background-size: 100% auto;
+    
 
     @include media(pc) {
-        // width: 1366px;
-        // height: 460px;
-        // background-image: url("./img/footer/background.png");
-
+        background-size: 100% 500px;
+    
         &__wrap {
             padding-top: 120px;
             display: flex;
@@ -419,10 +421,8 @@ main {
         }
     };
     @include media(tab) {
-        // width: 414px;
-        // height: 600px;
-
-        // background-image: url("./img/footer/background.png");
+        background-size: 100% 700px;
+        height: 700px;
 
         &__spacer {
             @include media(pc) {
@@ -463,10 +463,8 @@ main {
         }
     };
     @include media(sp) {
-        // width: 320px;
-        // height: 580px;
-
-        // background-image: url("./img/footer/background.png");
+        background-size: 100% 600px;
+        height: 600px;
 
         &__spacer {
             height: 64px;
@@ -721,7 +719,7 @@ td {
                 width: 350px;
             };
             @include media(sp) {
-                left: -200px;
+                left: -320px;
                 top: -300px;
                 width: 260px;
             };
@@ -740,7 +738,7 @@ td {
                 width: 350px;
             };
             @include media(sp) {
-                left: -200px;
+                left: 320px;
                 top: -300px;
                 width: 280px;
             };
@@ -760,7 +758,7 @@ td {
                 width: 350px;
             };
             @include media(sp) {
-                left: 0px;
+                left: -320px;
                 top: -300px;
                 width: 280px;
             };
@@ -779,7 +777,7 @@ td {
                 width: 350px;
             };
             @include media(sp) {
-                left: 0px;
+                left: 320px;
                 top: -300px;
                 width: 280px;
             };
@@ -797,7 +795,7 @@ td {
                 width: 310px;
             };
             @include media(sp) {
-                left: -330px;
+                left: -320px;
                 top: 200px;
                 width: 280px;
             };
@@ -830,7 +828,7 @@ td {
                 width: 310px;
             };
             @include media(sp) {
-                left: 0px;
+                left: -320px;
                 top: 200px;
                 width: 280px;
             };
@@ -996,6 +994,34 @@ td {
     background-size: 100% 710px;
 
 
+    &__mail {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid #a33143;
+        background: white;
+        color: #a33143;
+        @include media(pc) {
+            font-size: 0.8em;
+        };
+        @include media(tab) {
+            font-size: 0.8em;
+        };
+        @include media(sp) {
+            font-size: 0.7em;
+        };
+    }
+    &__tel {
+        margin-top:5px;
+        font-size: 1.2em;
+        letter-spacing: 0.2em;
+
+        &_img {
+            margin-right: 5px;
+        }
+    }
     // @include media(pc) {
     //     width: 1366px;
     //     background-image: url("./img/header/background.png");
