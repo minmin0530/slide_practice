@@ -6,9 +6,13 @@
         display: none;
     };
     @include media(tab) {
+        position: relative;
+        right: -40px;
         display: inline;
     };
     @include media(sp) {
+        position: relative;
+        right: -40px;
         display: inline;
     };
 
@@ -166,6 +170,7 @@ main {
         object-position: left;
         height: 420px;
         width: 200px;
+        font-family: HannariMincho;
 
         @include media(pc) {
             font-size: 48px;
@@ -173,15 +178,21 @@ main {
             top: -300px;
         };
         @include media(tab) {
-            font-size: 40px;
-            left: 0px;
+            font-size: 30px;
+            letter-spacing: 10px;
+            left: -10px;
             top: -250px;    
         };
         @include media(sp) {
-            font-size: 40px;
-            left: -20px;
+            font-size: 28px;
+            letter-spacing: 10px;
+            left: -30px;
             top: -250px;    
         };
+
+        &_span {
+            padding-top: 20px;
+        }
     }
 
     @include media(pc) {
@@ -284,15 +295,21 @@ main {
             width: 200px;
         };
         @include media(tab) {
-            font-size: 40px;
-            left: 60px;
+            font-size: 30px;
+            letter-spacing: 10px;
+            left: 90px;
             top: -980px;    
         };
         @include media(sp) {
-            font-size: 40px;
-            left: 60px;
+            font-size: 28px;
+            letter-spacing: 10px;
+            left: 90px;
             top: -980px;    
         };
+
+        &_span {
+            padding-top: 20px;
+        }
 
     }
 
@@ -439,6 +456,16 @@ main {
         }
 
         &__static {
+            &_wrap {
+                display: flex;
+                justify-content: center;
+                align-items: center; 
+                width: 100%;
+                height: 64px;
+                background: white;
+                position: fixed;
+                bottom: 0px;
+            }
             height: 64px;
             width: 414px;
             background: white;
@@ -470,6 +497,17 @@ main {
             height: 64px;
         }
         &__static {
+            &_wrap {
+                display: flex;
+                justify-content: center;
+                align-items: center; 
+                width: 100%;
+                height: 64px;
+                background: white;
+                position: fixed;
+                bottom: 0px;
+            }
+
             height: 64px;
             width: 320px;
             background: white;
@@ -714,7 +752,7 @@ td {
                 top: -300px;
             };
             @include media(tab) {
-                left: -200px;
+                left: -1200px;
                 top: -300px;
                 width: 350px;
             };
@@ -733,7 +771,7 @@ td {
                 top: -300px;
             };
             @include media(tab) {
-                left: -200px;
+                left: 1200px;
                 top: -300px;
                 width: 350px;
             };
@@ -753,7 +791,7 @@ td {
                 top: -300px;
             };
             @include media(tab) {
-                left: 0px;
+                left: -1000px;
                 top: -300px;
                 width: 350px;
             };
