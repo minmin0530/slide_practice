@@ -1335,6 +1335,32 @@ td {
   }
 }
 
+.article__h2_button {
+  border-radius: 5px;
+  padding: 10px 20px;
+  border: 1px solid #a33143;
+  background: white;
+  color: #a33143;
+}
+
+@media only screen and (min-width: 1366px) {
+  .article__h2_button {
+    font-size: 0.8em;
+  }
+}
+
+@media only screen and (max-width: 1365px) {
+  .article__h2_button {
+    font-size: 0.8em;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  .article__h2_button {
+    font-size: 0.7em;
+  }
+}
+
 .article__h2_span {
   border-bottom: dashed 1px #653f36;
 }
